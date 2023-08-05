@@ -38,11 +38,11 @@ yourproject
     └─templates
 ```
 
-**Version Log**
+**Version**
 
 v 0.0.1 2023.8.6 create
 
-## zh-han
+## zh-hans
 
 憋死我了一直写英文。
 
