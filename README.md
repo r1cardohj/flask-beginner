@@ -4,7 +4,10 @@ a quick project directory maker for flask.^_^
 
 **Quick Start**
 
+create a new dir such as `yourproject`
+
 ``` bash
+cd yourproject
 python -m venv env
 env\Scripts\activate 
 ```
