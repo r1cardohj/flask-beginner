@@ -38,7 +38,11 @@ def create_requirements():
 
 def create_wsgi():
     with open('wsgi.py','w') as f:
-            pass
+        pass
+
+def create_test():
+    with open('test.py','w') as f:
+        pass
 
 
 def make_app(name='app'):
@@ -68,7 +72,10 @@ def make_app(name='app'):
             pass
 
 
-if __name__ == '__main__':
+def run():
+    """
+        flask go!!!!!!
+    """
     parser = argparse.ArgumentParser()
     parser.add_argument('-n','--name',help='the name for your app package')
     args = parser.parse_args()
@@ -81,5 +88,6 @@ if __name__ == '__main__':
     create_readme()
     create_requirements()
     create_wsgi()
+    create_test()
     
 

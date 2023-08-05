@@ -6,6 +6,15 @@ a quick project directory maker for flask.
 
 ``` bash
 python -m venv env
-(venv):flask-beginner run -n  
+env\Scripts\activate 
 ```
+
+then
+
+``` b
+(env):pip install flask-beginner
+(env):beginner
+```
+
+your project will like this
 

@@ -17,7 +17,7 @@ with open(path.join(basedir,'README.md'),encoding='utf-8') as f:
 
 setup(
     name ='Flask-Beginner',
-    version = '0.1.0',
+    version = '0.0.1',
     url='https://github.com/r1cardohj/flask-beginner',
     license='MIT',
     author='r1cardohj',
@@ -39,5 +39,10 @@ setup(
             'Flask-Migrate'
         ]
             
-    }
+    },
+    entry_points={
+        'console_scripts': [
+            'beginner = flask_beginner.beginner:run',
+        ]
+    },
 )
