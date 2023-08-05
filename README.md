@@ -29,6 +29,7 @@ yourproject
 │  wsgi.py
 │
 └─myapp
+    │  __init__.py
     │  extensions.py
     │  forms.py
     │  models.py
