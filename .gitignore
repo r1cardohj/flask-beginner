@@ -1,3 +1,6 @@
 env
 .history
 *.pyc
+build
+dist
+Flask_Beginner.egg-info
