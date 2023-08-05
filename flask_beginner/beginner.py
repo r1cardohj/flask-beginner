@@ -49,6 +49,9 @@ def make_app(name='app'):
     """make app package"""
     
     with cd(name):
+        with open('__init__.py','w') as f:
+            pass
+        
         with open('models.py','w') as f:
             pass
         
