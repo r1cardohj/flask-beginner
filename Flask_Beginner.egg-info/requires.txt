@@ -1,7 +1,0 @@
-flask
-
-[all]
-flask-login
-flask-wtf
-flask-sqlalchemy
-Flask-Migrate
