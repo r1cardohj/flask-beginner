@@ -48,10 +48,14 @@ v 0.0.1 2023.8.6 create
 
 v 0.0.2 2023.8.6 add app file `__init__.py`
 
- V 0.0.3 2023.8.7:
-    
-    1. do not replace the original file
-    2. Code optimization
+V 0.0.3 2023.8.7:
+
+1. do not replace the original file
+2. Code optimization
+
+v 0.0.4 2023.8.7:
+
+1. change nothing 
 
 ## zh-hans
 
