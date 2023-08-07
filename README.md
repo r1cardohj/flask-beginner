@@ -21,7 +21,7 @@ then
 
 your project will like this
 ``` bash
-.
+yourproject
 │  .gitignore
 │  README.md
 │  requirements.txt
@@ -39,7 +39,16 @@ your project will like this
     │      __init__.py
     │
     ├─static
+    │  │  style.css
+    │  │
+    │  └─img
     └─templates
+        │  base.html
+        │
+        └─errors
+                400.html
+                404.html
+                500.html
 ```
 
 **Version**
