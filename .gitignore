@@ -1,6 +1,6 @@
+.env
 env
 .history
 *.pyc
-build
-dist
-Flask_Beginner.egg-info
+__pycache__
+

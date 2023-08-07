@@ -8,72 +8,56 @@ class cd:
         
     def __enter__(self):
         self.savapath = os.getcwd()
-        os.makedirs(self.newdir)
+        if not os.path.exists(self.newdir):
+            os.makedirs(self.newdir)
         os.chdir(self.newdir)
 
     def __exit__(self, etype, value, traceback):
         os.chdir('..')
 
 
-def create_gitigonore():
-    """make .gitignore"""
-    with open('.gitignore','w') as f:
-        f.write('.env\n')
-        f.write('.history\n')
-        f.write('env\n')
-        f.write('*.pyc\n')
-        f.write('__pycache__\n')
+def create_file(filename,content = ''):
+    if not os.path.exists(filename):
+        with open(filename,'w') as f:
+            if content:
+                f.write(content)
 
 
-def create_readme():
-    """make README.md"""
-    with open('README.md','w') as f:
-        pass
-
-
-def create_requirements():
-    """make requirements.txt"""
-    with open('requirements.txt','w') as f:
-        f.writelines('Flask')
-
-def create_wsgi():
-    with open('wsgi.py','w') as f:
-        pass
-
-def create_test():
-    with open('test.py','w') as f:
-        pass
+def make_project_files():
+    create_file('.gitignore',
+                content='.env\nenv\n.history\n*.pyc\n__pycache__\n'
+                )
+    create_file('README.md')
+    create_file('requirements.txt')
+    create_file('wsgi.py')
+    create_file('test.py')
 
 
 def make_app(name='app'):
     """make app package"""
     
     with cd(name):
-        with open('__init__.py','w') as f:
-            pass
-        
-        with open('models.py','w') as f:
-            pass
-        
-        with open('extensions.py','w') as f:
-            pass
-        
-        with open('forms.py','w') as f:
-            pass
-        
-        with open('settings.py','w') as f:
-            pass
+        create_file('__init__.py')
+        create_file('models.py')
+        create_file('extensions.py')
+        create_file('forms.py')
+        create_file('settings.py')
         
         with cd('blueprints'):
-            with open('__init__.py','w'):
-                pass
+            create_file('__init__.py')
         
         with cd('static'):
-            pass
+            create_file('style.css')
+            with cd('img'):
+                pass
         
         with cd('templates'):
-            pass
-
+            create_file('base.html')
+            with cd('errors'):
+                create_file('404.html')
+                create_file('400.html')
+                create_file('500.html')
+        
 
 def run():
     """
@@ -87,10 +71,8 @@ def run():
         make_app(app_name)
     else:
         make_app()
-    create_gitigonore()
-    create_readme()
-    create_requirements()
-    create_wsgi()
-    create_test()
+    make_project_files()
+    
+    
     
 

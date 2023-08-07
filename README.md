@@ -21,7 +21,7 @@ then
 
 your project will like this
 ``` bash
-yourproject
+.
 │  .gitignore
 │  README.md
 │  requirements.txt
@@ -29,11 +29,11 @@ yourproject
 │  wsgi.py
 │
 └─myapp
-    │  __init__.py
     │  extensions.py
     │  forms.py
     │  models.py
     │  settings.py
+    │  __init__.py
     │
     ├─blueprints
     │      __init__.py
@@ -47,6 +47,11 @@ yourproject
 v 0.0.1 2023.8.6 create
 
 v 0.0.2 2023.8.6 add app file `__init__.py`
+
+ V 0.0.3 2023.8.7:
+    
+    1. do not replace the original file
+    2. Code optimization
 
 ## zh-hans
 
